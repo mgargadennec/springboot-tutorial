@@ -26,19 +26,37 @@
 	</properties>
 
 	<dependencies>
-		<!-- 
-			A spring boot starter is a dependency whose version is managed by 
+		<!-- A spring boot starter is a dependency whose version is managed by 
 			the parent pom.xml. A starter contains a group of functionnalities (mostly 
 			3rd party librairies) that'll be added in the Spring ApplicationContext with 
 			default configuration when present on the classpath. Lots of starters are 
 			available here : https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters 
-			Multiple starters can be added. (ex : spring-boot-starter-web for the web tier) 
-		-->
+			Multiple starters can be added. (ex : spring-boot-starter-web for the web 
+			tier) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.9.5</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.neo4j</groupId>
+			<artifactId>neo4j-cypher-compiler-2.2</artifactId>
+			<version>2.2.5</version>
+		</dependency>
 	</dependencies>
 
 	<build>
