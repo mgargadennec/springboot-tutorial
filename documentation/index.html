@@ -33,53 +33,55 @@
 			<div class="row row-offcanvas row-offcanvas-left">
 
 				<!--sidebar-->
-				<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+				<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar"
+					role="navigation">
 					<div>
 						<ul class="nav affix" id="sidebar-nav">
 							<li><a href="#general">General introduction</a></li>
 							<li><a href="#spring">Spring & SpringBoot</a></li>
-							<li><a href="#di">Dependency injection</a></li>
+							<li>
+								<a href="#di">Dependency injection</a>
+								<ul>
+									<li><a href="#di">ApplicationContext</a></li>
+									<li><a href="#di">Bean registration</a></li>
+									<li><a href="#di">Injection</a></li>
+									<li><a href="#di">Bean scope</a></li>	
+								</ul>
+							</li>
 							<li><a href="#configuration">Configuration</a></li>
 							<li><a href="#standards">Code standards</a></li>
-							<li>
-								<a href="#tests">Tests</a>
+							<li><a href="#tests">Tests</a>
 								<ul>
 									<li><a href="#unit_tests">Unit testing</a></li>
 									<li><a href="#integration_tests">Integration testing</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#model">Model</a>
+								</ul></li>
+							<li><a href="#model">Model</a>
 								<ul>
 									<li><a href="#persisted_model">Persisted Object</a></li>
 									<li><a href="#dto_model">Data Transfer Object</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#business">Business layers</a>
+								</ul></li>
+							<li><a href="#business">Business layers</a>
 								<ul>
 									<li><a href="#repositories_business">Data repositories</a></li>
 									<li><a href="#services_business">Services</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#web">Web layers</a>
+								</ul></li>
+							<li><a href="#web">Web layers</a>
 								<ul>
 									<li><a href="#rest_web">REST API</a></li>
-									<li><a href="#server_rendering_web">Server side rendering</a></li>
+									<li><a href="#server_rendering_web">Server side
+											rendering</a></li>
 									<li><a href="#interceptor_web">Interceptors</a></li>
 									<li><a href="#resolver_web">Resolvers</a></li>
 									<li><a href="#resolver_web">MessageConverters</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#validation">Validation</a>
+								</ul></li>
+							<li><a href="#validation">Validation</a>
 								<ul>
 									<li><a href="#simple_validation">Simple validator</a></li>
-									<li><a href="#composite_validation">Composite validator</a></li>
-									<li><a href="#handling_errors_validation">Handling validation errors</a></li>
-								</ul>	
-							</li>
+									<li><a href="#composite_validation">Composite
+											validator</a></li>
+									<li><a href="#handling_errors_validation">Handling
+											validation errors</a></li>
+								</ul></li>
 							<li><a href="#clients">Clients</a>
 								<ul>
 									<li><a href="#cors_clients">CORS Requests</a></li>
@@ -87,48 +89,46 @@
 									<li><a href="#mobile_clients">Mobile</a></li>
 									<li><a href="#postman_clients">Postman / curl</a></li>
 								</ul></li>
-							<li>
-								<a href="#security">Security</a>
+							<li><a href="#security">Security</a>
 								<ul>
 									<li><a href="#authentication_security">Authentication</a></li>
 									<li><a href="#basic_security">Basic Auth</a></li>
 									<li><a href="#oauth2_security">Oauth2</a></li>
 									<li><a href="#custom_security">Custom</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#production">Production</a>
+								</ul></li>
+							<li><a href="#production">Production</a>
 								<ul>
 									<li><a href="#deployment_production">Deployment</a></li>
-									<li><a href="#configuration_production">Configuration override</a></li>
+									<li><a href="#configuration_production">Configuration
+											override</a></li>
 									<li><a href="#monitoring_production">Monitoring</a></li>
-								</ul>
-							</li>
+								</ul></li>
 						</ul>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
+				<div class="col-xs-12 col-sm-9" data-spy="scroll"
+					data-target="#sidebar-nav">
 					<h1 id="general">General introduction</h1>
 					<h1 id="section1">Spring & SpringBoot</h1>
 					<h1 id="di">Dependency injection</h1>
 					<h1 id="configuration">Configuration</h1>
 					<h1 id="standards">Code standards</h1>
-					
+
 					<!-- Tests -->
 					<h1 id="tests">Tests</h1>
 					<h4 id="unit_tests">Unit testing</h4>
 					<h4 id="integration_tests">Integration testing</h4>
-					
+
 					<!-- Model -->
 					<h1 id="model">Model</h1>
 					<h4 id="persisted_model">Persisted Object</h4>
 					<h4 id="dto_model">Data Transfer Object</h4>
-					
+
 					<!-- Business Layers -->
 					<h1 id="business">Business Layers</h1>
 					<h4 id="repositories_business">Data repositories</h4>
 					<h4 id="services_business">Services</h4>
-					
+
 					<!-- Web Layers -->
 					<h1 id="web">Web layers</h1>
 					<h4 id="rest_web">REST API</h4>
@@ -136,27 +136,27 @@
 					<h4 id="interceptor_web">Interceptors</h4>
 					<h4 id="resolver_web">Resolvers</h4>
 					<h4 id="resolver_web">MessageConverters</h4>
-					
+
 					<!-- Validation -->
 					<h1 id="validation">Validation</h1>
 					<h4 id="simple_validation">Simple validator</h4>
 					<h4 id="composite_validation">Composite validator</h4>
 					<h4 id="handling_errors_validation">Handling validation errors</h4>
-					
+
 					<!-- Clients -->
 					<h1 id="clients">Clients</h1>
 					<h4 id="cors_clients">CORS Requests</h4>
 					<h4 id="browser_clients">Browser</h4>
 					<h4 id="mobile_clients">Mobile</h4>
 					<h4 id="postman_clients">Postman / curl</h4>
-					
+
 					<!-- Security -->
 					<h1 id="security">Security</h1>
 					<h4 id="authentication_security">Authentication</h4>
 					<h4 id="basic_security">Basic Auth</h4>
 					<h4 id="oauth2_security">Oauth2</h4>
 					<h4 id="custom_security">Custom</h4>
-					
+
 					<!-- Production -->
 					<h1 id="production">Production</h1>
 					<h4 id="deployment_production">Deployment</h4>
@@ -165,7 +165,7 @@
 				</div>
 			</div>
 		</div>
-	
+
 
 		<!-- script references -->
 		<script
