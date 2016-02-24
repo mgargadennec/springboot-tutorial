@@ -31,9 +31,12 @@ public class ApplicationTests {
 
 	@Test
 	public void testApplicationStart() {
-		SpringBootApplication annotation = AnnotationUtils.getAnnotation(Application.class, SpringBootApplication.class);
-		Assert.assertNotNull("Spring boot annotation (@SpringBootApplication) not used on Application class!",annotation); 
-		Assert.assertThat("Spring boot application not started !", ctx.getBeanDefinitionNames(), hasItemInArray(startsWith("org.springframework.boot")) );
+		SpringBootApplication annotation = AnnotationUtils.getAnnotation(Application.class,
+				SpringBootApplication.class);
+		Assert.assertNotNull("Spring boot annotation (@SpringBootApplication) not used on Application class!",
+				annotation);
+		Assert.assertThat("Spring boot application not started !", ctx.getBeanDefinitionNames(),
+				hasItemInArray(startsWith("org.springframework.boot")));
 	}
 
 	@Test
