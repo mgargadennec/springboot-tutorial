@@ -84,4 +84,17 @@ public class ApplicationTests {
 				ctx.getBean("printer") instanceof HelloWorldPrinter);
 
 	}
+
+	@Test
+	public void should_test_scope() throws InterruptedException {
+		Assert.assertTrue("Application context does not contains a bean name 'testScope'",
+				ctx.containsBean("testScope"));
+
+		Assert.assertTrue("'testScope' is not of type String", ctx.getBean("testScope") instanceof String);
+		String bean = ctx.getBean("testScope", String.class);
+		String bean2 = ctx.getBean("testScope", String.class);
+
+		Assert.assertNotEquals("Beans should not be equals !", bean, bean2);
+
+	}
 }
