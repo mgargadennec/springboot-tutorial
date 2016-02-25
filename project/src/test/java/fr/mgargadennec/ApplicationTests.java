@@ -97,4 +97,8 @@ public class ApplicationTests {
 		Assert.assertNotEquals("Beans should not be equals !", bean, bean2);
 
 	}
+	
+	@Test
+	public void should_test_scope_proxy() throws InterruptedException {
+	}
 }
