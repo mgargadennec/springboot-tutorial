@@ -100,5 +100,13 @@ public class ApplicationTests {
 	
 	@Test
 	public void should_test_scope_proxy() throws InterruptedException {
+		Assert.assertTrue("Application context does not contains a bean name 'testScopeProxy'",
+				ctx.containsBean("testScopeProxy"));
+
+		Assert.assertTrue("'testScopeProxy' is not of type String", ctx.getBean("testScopeProxy") instanceof String);
+		String bean = ctx.getBean("testScopeProxy", String.class);
+		String bean2 = ctx.getBean("testScopeProxy", String.class);
+
+		Assert.assertNotEquals("Beans should not be equals !", bean, bean2);
 	}
 }
